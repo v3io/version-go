@@ -1,16 +1,24 @@
-# version
-Go module to maintain an applicaiton version
+# Version
+
+Go module to maintain an application version
+
+## Install
+
+```sh
+go get -u github.com/v3io/version-go
+```
 
 ## Usage
+
 During build Add the following linker arguments to inject the version:
-```
+
+```sh
 -ldflags="-X github.com/v3io/version/version.gitCommit=$(GIT_COMMIT) \
--X github.com/v3io/version/version.label=$(GIT_TAG) \
--X github.com/v3io/version/version.os=$(GOOS) \
--X github.com/v3io/version/version.arch=$(GOARCH)"
+-X github.com/v3io/version/version.label=$(GIT_TAG)
 ```
 
 In your application, you can then:
+
 ```go
 import "github.com/v3io/version-go"
 
