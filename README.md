@@ -10,11 +10,11 @@ go get -u github.com/v3io/version-go
 
 ## Usage
 
-During build Add the following linker arguments to inject the version:
+During build, add the following linker arguments to inject the version:
 
 ```sh
--ldflags="-X github.com/v3io/version/version.gitCommit=$(GIT_COMMIT) \
--X github.com/v3io/version/version.label=$(GIT_TAG)
+-ldflags="-X github.com/v3io/version-go/version.gitCommit=$(GIT_COMMIT) \
+-X github.com/v3io/version-go/version.label=$(GIT_TAG)
 ```
 
 In your application, you can then:
